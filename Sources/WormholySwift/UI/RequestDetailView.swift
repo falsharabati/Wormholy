@@ -87,9 +87,11 @@ internal struct RequestDetailView: View {
             .navigationTitle(URL(string: request.url)?.path ?? "Request Detail")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("More") {
-                        isActionSheetPresented = true
-                    }
+                    if Wormholy.isSharable {
+						Button("More") {
+							isActionSheetPresented = true
+						}
+					}
                 }
             }
             .actionSheet(isPresented: $isActionSheetPresented) {

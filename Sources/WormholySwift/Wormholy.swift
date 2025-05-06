@@ -157,3 +157,18 @@ extension Wormholy {
         return isEnabled
     }
 }
+
+/// WormholyConstructor calls this to initialize library
+extension Wormholy {
+	// flag to allow sharing
+	private static var _isSharable: Bool = false
+
+	public static var isSharable: Bool {
+		get {
+			return _isSharable
+		}
+		set {
+			_isSharable = newValue
+		}
+	}
+}
