@@ -61,7 +61,7 @@ internal struct BodyDetailView: View {
         }
         .navigationTitle("Response Body")
         .navigationBarItems(trailing: Button(action: {
-            isShareSheetPresented = true
+            isShareSheetPresented = true && Wormholy.isSharable
         }) {
             Image(systemName: "square.and.arrow.up")
         })

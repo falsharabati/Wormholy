@@ -48,9 +48,15 @@ internal struct RequestsView: View {
                 .navigationTitle("Requests")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button("More") {
-                            isActionSheetPresented = true
-                        }
+                        if Wormholy.isSharable {
+							Button("More") {
+								isActionSheetPresented = true
+							}
+						} else {
+							Button("Clear") {
+								clearRequests()
+							}
+						}
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Done") {
