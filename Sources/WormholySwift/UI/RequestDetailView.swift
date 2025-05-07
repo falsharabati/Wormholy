@@ -16,7 +16,7 @@ internal struct RequestDetailView: View {
     @State private var selectedExportOption: RequestResponseExportOption = .flat
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 
                 // Overview Section
