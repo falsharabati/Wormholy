@@ -26,7 +26,7 @@ internal struct RequestsView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: 0) {
                 SearchBar(text: $searchText, onTextChanged: filterRequests)
                 
